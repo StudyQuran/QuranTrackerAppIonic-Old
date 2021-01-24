@@ -21,21 +21,21 @@ import '@ionic/react/css/display.css'
 /* Theme variables */
 import './theme/variables.css'
 /* Components */
-import Tabs from './components/screens/teacher/Tabs'
-import Auth from './components/screens/auth/Auth'
+import { Teacher } from './components/screens/teacher'
+import { Auth } from './components/screens/auth'
+// import { Home } from './components/screens/landingPage'
+import { Admin } from './components/screens/admin'
 import Error from './components/Error'
-import IntroSlides from './components/screens/intro/IntroSlides'
 
 const App: React.FC = () => {
   return (
     <IonApp>
       <IonRouterOutlet>
         <Route path='/auth' component={Auth} />
-        <Route path='/tabs' component={Tabs} />
-        <Route exact path='/' component={IntroSlides} />
+        <Route path='/admin' component={Admin} />
+        <Route path='/teacher' component={Teacher} />
+        <Route path='/' component={Auth} exact />
         <Route component={Error} />
-        {/* <Route exact path='/' render={() =>  } /> */}
-        {/* <Route exact path='/intro' component={IntroSlides} /> */}
       </IonRouterOutlet>
     </IonApp>
   )

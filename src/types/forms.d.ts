@@ -1,5 +1,5 @@
 declare namespace FormTypes {
-  interface SignUpForm {
+  interface ApplyForm {
     firstName: string
     lastName: string
     email: string

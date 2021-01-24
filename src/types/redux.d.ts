@@ -2,6 +2,7 @@ declare namespace ReduxStateTypes {
   interface ReduxState {
     Intro: introState
     Auth: authState
+    AdminMultiStepForm: AdminMultiStepForm
   }
   interface authState {
     registerRes: []
@@ -19,5 +20,15 @@ declare namespace ReduxStateTypes {
   }
   interface introState {
     introWatched: string
+  }
+  interface AdminMultiStepForm {
+    TeacherData: TeacherData
+    ParentData: ParentData
+  }
+  interface TeacherData {
+    Teacher: [{ firstName: string; lastName: string; email: string; Class: [{ ClassName: string }] }]
+  }
+  interface ParentData {
+    Parent: [{ firstName: string; lastName: string; email: string; Student: [{ fisrtName: string; lastName: string; classes: [] }] }]
   }
 }

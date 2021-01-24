@@ -1,7 +1,22 @@
-import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonLabel, IonList, IonListHeader, IonPage, IonRow, IonText, IonTitle, IonToast, IonToolbar } from '@ionic/react'
+import {
+  IonButton,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonPage,
+  IonRow,
+  IonText,
+  IonTitle,
+  IonToast,
+  IonToolbar
+} from '@ionic/react'
 import React, { useState } from 'react'
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ApiCalls } from '../../../api'
 import { InputType } from '../../../types/enums'
 import MyInput from '../../Util/resuable/MyInput'
@@ -46,8 +61,22 @@ const ForgotPassword: React.FC = () => {
                         </IonText>
                       </IonLabel>
                     </IonListHeader>
-                    <MyInput id='userName' input_type={InputType.text} name='userName' label='User Name' placeholder='User Name' placeHolderColor='#2dd36f' />
-                    <MyInput id='email' input_type={InputType.email} name='email' label='Email' placeholder='Email' placeHolderColor='#2dd36f' />
+                    <MyInput
+                      id='userName'
+                      input_type={InputType.text}
+                      name='userName'
+                      title='User Name'
+                      placeholder='User Name'
+                      placeHolderColor='#2dd36f'
+                    />
+                    <MyInput
+                      id='email'
+                      input_type={InputType.email}
+                      name='email'
+                      title='Email'
+                      placeholder='Email'
+                      placeHolderColor='#2dd36f'
+                    />
                   </IonList>
                 </IonCol>
               </IonRow>
@@ -69,7 +98,12 @@ const ForgotPassword: React.FC = () => {
             </IonGrid>
           </form>
         </FormProvider>
-        <IonToast isOpen={showToast} onDidDismiss={() => setShowToast(false)} message={!error ? 'Reset email was sent' : 'User name or Email is not registerd'} duration={4000} />
+        <IonToast
+          isOpen={showToast}
+          onDidDismiss={() => setShowToast(false)}
+          message={!error ? 'Reset email was sent' : 'User name or Email is not registerd'}
+          duration={4000}
+        />
       </IonContent>
     </IonPage>
   )

@@ -1,5 +1,17 @@
 import React from 'react'
-import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonLabel, IonList, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react'
+import {
+  IonButton,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonLabel,
+  IonList,
+  IonPage,
+  IonRow,
+  IonTitle,
+  IonToolbar
+} from '@ionic/react'
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form'
 import MyInput from '../../Util/resuable/MyInput'
 import { InputType } from '../../../types/enums'
@@ -34,8 +46,20 @@ const Login: React.FC = () => {
               <IonRow>
                 <IonCol>
                   <IonList inset>
-                    <MyInput id='userName' input_type={InputType.text} name='userName' label='User Name' placeholder='User Name' />
-                    <MyInput id='password' input_type={InputType.password} name='password' label='Passwaord' placeholder='Password' />
+                    <MyInput
+                      id='userName'
+                      input_type={InputType.text}
+                      name='userName'
+                      title='User Name'
+                      placeholder='User Name'
+                    />
+                    <MyInput
+                      id='password'
+                      input_type={InputType.password}
+                      name='password'
+                      title='Passwaord'
+                      placeholder='Password'
+                    />
                   </IonList>
                 </IonCol>
               </IonRow>
@@ -51,6 +75,20 @@ const Login: React.FC = () => {
                 <IonCol className='ion-text-center'>
                   <Link to='/auth/forgotpassword'>
                     <IonLabel>Forgot Password ?</IonLabel>
+                  </Link>
+                </IonCol>
+              </IonRow>
+              <IonRow className='ion-padding'>
+                <IonCol className='ion-text-center'>
+                  <Link to='/admin'>
+                    <IonLabel>Admin</IonLabel>
+                  </Link>
+                </IonCol>
+              </IonRow>
+              <IonRow className='ion-padding'>
+                <IonCol className='ion-text-center'>
+                  <Link to='/teacher'>
+                    <IonLabel>Teacher</IonLabel>
                   </Link>
                 </IonCol>
               </IonRow>

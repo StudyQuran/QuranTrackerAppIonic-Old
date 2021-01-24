@@ -1,4 +1,20 @@
-import { IonButton, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonHeader, IonLabel, IonList, IonListHeader, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react'
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonPage,
+  IonRow,
+  IonText,
+  IonTitle,
+  IonToolbar
+} from '@ionic/react'
 import React from 'react'
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form'
 import { Link, useParams } from 'react-router-dom'
@@ -45,8 +61,22 @@ const ChangePassword: React.FC = () => {
                             </IonText>
                           </IonLabel>
                         </IonListHeader>
-                        <MyInput id='password' input_type={InputType.password} name='password' label='Password' placeholder='Password' placeHolderColor='#2dd36f' />
-                        <MyInput id='confirmpassword' input_type={InputType.password} name='confirmpassword' label='Confirm Password' placeholder='Confirm Password' placeHolderColor='#2dd36f' />
+                        <MyInput
+                          id='password'
+                          input_type={InputType.password}
+                          name='password'
+                          title='Password'
+                          placeholder='Password'
+                          placeHolderColor='#2dd36f'
+                        />
+                        <MyInput
+                          id='confirmpassword'
+                          input_type={InputType.password}
+                          name='confirmpassword'
+                          title='Confirm Password'
+                          placeholder='Confirm Password'
+                          placeHolderColor='#2dd36f'
+                        />
                       </IonList>
                     </IonCol>
                   </IonRow>

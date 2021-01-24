@@ -15,7 +15,8 @@ export enum InputType {
   password,
   radio,
   checkbox,
-  number
+  number,
+  multiSelect
 }
 export enum CardTypes {
   button,
